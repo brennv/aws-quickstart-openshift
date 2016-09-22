@@ -1,0 +1,18 @@
+# Ansible 'hosts' file for basic 1 master 2 node install
+[OSEv3:children]
+masters
+nodes
+
+[OSEv3:vars]
+ansible_ssh_user=root
+deployment_type=openshift-enterprise
+product_type=openshift
+# htpasswd auth
+#openshift_master_identity_providers=[{'name': 'htpasswd_auth', 'login': 'true', 'challenge': 'true', 'kind': 'HTPasswdPasswordIdentityProvider', 'filename': '/etc/origin/master/htpasswd'}]
+
+[masters]
+ose-master.rhosepaas.com        openshift_ip=10.90.1.189 openshift_public_ip=10.90.1.189 openshift_hostname=ose-master.rhosepaas.com openshift_public_hostname=ose-master.rhosepaas.com
+[nodes]
+ose-node2.rhosepaas.com         openshift_ip=10.90.1.172 openshift_public_ip=10.90.1.172 openshift_hostname=ose-node2.rhosepaas.com openshift_public_hostname=ose-node2.rhosepaas.com
+ose-node1.rhosepaas.com         openshift_ip=10.90.1.147 openshift_public_ip=10.90.1.147 openshift_hostname=ose-node1.rhosepaas.com openshift_public_hostname=ose-node1.rhosepaas.com
+ose-master.rhosepaas.com        openshift_ip=10.90.1.189 openshift_public_ip=10.90.1.189 openshift_hostname=ose-master.rhosepaas.com openshift_public_hostname=ose-master.rhosepaas.com
