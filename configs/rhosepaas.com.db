@@ -1,0 +1,16 @@
+$ORIGIN .
+$TTL 1 ; 1 seconds (for testing only)
+rhosepaas.com IN SOA ns1.rhosepaas.com. hostmaster.rhosepaas.com. (
+        2011112909 ; serial
+        60 ; refresh (1 minute)
+        15 ; retry (15 seconds)
+        1800 ; expire (30 minutes)
+        10 ; minimum (10 seconds)
+)
+        NS      ns1.rhosepaas.com.
+        MX      10 mail.rhosepaas.com.
+$ORIGIN rhosepaas.com.
+ns1             A       10.90.1.38
+ose-master      A       10.90.1.127
+ose-node1       A       10.90.1.38
+ose-node2       A       10.90.1.146

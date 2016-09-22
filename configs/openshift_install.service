@@ -1,0 +1,6 @@
+[Unit]
+Description=install_openshift
+
+[Service]
+Type=simple
+ExecStart=/root/install_script.sh
