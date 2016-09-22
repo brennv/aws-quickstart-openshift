@@ -24,7 +24,7 @@ ps -ef |grep atd > /tmp/pgrep-atd.log
 # Download vncsetup.sh
 # Make syre vncsetup.sh is publicly accessible and update the location below
 mkdir /tmp/vncsetup
-curl https://raw.githubusercontent.com/brennv/quickstart-openshift/master/scripts/vncsetup.sh -o /tmp/vncsetup/vncsetup.sh
+curl https://raw.githubusercontent.com/brennv/aws-quickstart-openshift/master/scripts/vncsetup.sh -o /tmp/vncsetup/vncsetup.sh
 chmod a+x /tmp/vncsetup/vncsetup.sh
 
 # SELinux -> Permissive mode for running 'at'
