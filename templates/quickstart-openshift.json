@@ -1,23 +1,54 @@
 [
-  {
-    "ParameterKey": "KeyPairName",
-    "ParameterValue": "tonynv"
-  }, 
-  {
-    "ParameterKey": "RedhatPortalUsername",
-    "ParameterValue": "testuser@redhat.com"
-  },
-  {
-    "ParameterKey": "RedhatPortalPassword",
-    "ParameterValue": "somepass"
-  },
-  {
-    "ParameterKey": "Credentials",
-    "ParameterValue": "somepass"
-  },
-  {
-    "ParameterKey": "BastionPassword",
-    "ParameterValue": "somepass"
-  }
+    {
+        "ParameterKey": "AllowConnectionFrom",
+        "ParameterValue": "10.90.0.0/16"
+    },
+    {
+        "ParameterKey": "BastionInstanceType",
+        "ParameterValue": "t2.large"
+    },
+    {
+        "ParameterKey": "BastionPassword",
+        "ParameterValue": "$[alfred_genpass_32]"
+    },
+    {
+        "ParameterKey": "Credentials",
+        "ParameterValue": "$[alfred_genpass_32]"
+    },
+    {
+        "ParameterKey": "KeyPairName",
+        "ParameterValue": "cikey"
+    },
+    {
+        "ParameterKey": "MasterInstanceType",
+        "ParameterValue": "t2.large"
+    },
+    {
+        "ParameterKey": "Node1InstanceType",
+        "ParameterValue": "t2.large"
+    },
+    {
+        "ParameterKey": "Node2InstanceType",
+        "ParameterValue": "t2.large"
+    },
+    {
+        "ParameterKey": "PrivateSubnetCIDR",
+        "ParameterValue": "10.90.2.0/24"
+    },
+    {
+        "ParameterKey": "PublicSubnetCIDR",
+        "ParameterValue": "10.90.1.0/24"
+    },
+    {
+        "ParameterKey": "RedhatPortalPassword",
+        "ParameterValue": "$[alfred_genpass_32]"
+    },
+    {
+        "ParameterKey": "RedhatPortalUsername",
+        "ParameterValue": "testuser@redhat.com"
+    },
+    {
+        "ParameterKey": "VPCCIDR",
+        "ParameterValue": "10.90.0.0/16"
+    }
 ]
-

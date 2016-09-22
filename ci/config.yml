@@ -1,8 +1,7 @@
 global:
+  marketplace-ami: false
   owner: quickstart-eng@amazon.com
   qsname: quickstart-openshift
-  marketplace-ami: false
-  reporting: true
   regions:
     - ap-northeast-1
     - ap-southeast-1
@@ -12,9 +11,8 @@ global:
     - us-east-1
     - us-west-1
     - us-west-2
-  cis3bucket:  s3://quickstart-ci-bucket
- 
+  reporting: true
 tests:
   openshift:
-    template_file: quickstart-openshift.template
     parameter_input: quickstart-openshift.json
+    template_file: quickstart-openshift.template
